@@ -9,4 +9,6 @@ for fc in fc_name_list:
     desc_obj = arcpy.Describe(fc_path)
 
     shape_type = desc_obj.shapeType
-    print("The geometry of a feature class : {} is {}".format(fc,shape_type))
+
+    dataset_type = desc_obj.datasetType
+    print("the name of {} is {} and its feature type is {}".format(dataset_type,fc,shape_type))
