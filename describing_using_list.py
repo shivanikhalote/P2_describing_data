@@ -12,3 +12,12 @@ for fc in fc_name_list:
 
     dataset_type = desc_obj.datasetType
     print("the name of {} is {} and its feature type is {}".format(dataset_type,fc,shape_type))
+
+    sr_obj = desc_obj.spatialReference
+    print(sr_obj.name)
+    print(sr_obj.type)
+
+    field_list = desc_obj.fields
+    for field in field_list:
+        print("the field name is {} and type is {}".format(field.name,field.type))
+print("process complete")
